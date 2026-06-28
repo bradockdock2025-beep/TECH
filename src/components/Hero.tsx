@@ -1,4 +1,10 @@
-export default function Hero() {
+import type { Dict } from "@/app/[lang]/dictionaries";
+
+interface HeroProps {
+  dict: Dict["hero"];
+}
+
+export default function Hero({ dict }: HeroProps) {
   return (
     <section className="relative h-screen min-h-[600px] flex flex-col items-center overflow-hidden bg-[#0b0b0e]">
       {/* Atmosphere: full-bleed dark gradient with blue depth */}
@@ -19,17 +25,15 @@ export default function Hero() {
         }}
       />
 
-      {/* Floating nav is in layout. Content fills below */}
-
       {/* === TEXT AT TOP — Tesla pattern === */}
       <div className="relative z-10 flex flex-col items-center text-center pt-36 px-6 flex-1">
         <span className="inline-flex items-center gap-2 text-[#1d6ff3] text-xs font-semibold uppercase tracking-[0.2em] mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-[#1d6ff3] animate-pulse" />
-          Software House — Portugal
+          {dict.badge}
         </span>
 
         <h1 className="text-6xl sm:text-7xl lg:text-8xl font-black text-white leading-[1] tracking-[-0.03em] max-w-4xl">
-          Software que
+          {dict.h1a}
           <br />
           <span
             className="text-transparent bg-clip-text"
@@ -37,14 +41,14 @@ export default function Hero() {
               backgroundImage: "linear-gradient(90deg, #1d6ff3 0%, #60a5fa 60%, #1d6ff3 100%)",
             }}
           >
-            sustenta
+            {dict.h1b}
           </span>
           <br />
-          negócios reais.
+          {dict.h1c}
         </h1>
 
         <p className="mt-8 text-lg text-[#9ca3af] max-w-md leading-relaxed">
-          Construímos websites, e-commerce e aplicativos — para negócios, marcas e projetos pessoais. Do briefing ao deploy.
+          {dict.description}
         </p>
       </div>
 
@@ -94,7 +98,6 @@ export default function Hero() {
                     <div className="w-20 h-7 border border-white/20 rounded-sm" />
                   </div>
                 </div>
-                {/* Glow in banner */}
                 <div className="absolute right-8 top-1/2 -translate-y-1/2 w-20 h-20 bg-[#1d6ff3]/10 rounded-full blur-2xl" />
               </div>
 
@@ -150,19 +153,19 @@ export default function Hero() {
             href="#contacto"
             className="px-8 py-3 bg-white text-black font-semibold text-sm rounded-sm hover:bg-white/90 transition-colors"
           >
-            Iniciar projeto
+            {dict.cta1}
           </a>
           <a
             href="#servicos"
             className="px-8 py-3 border border-white/30 text-white font-semibold text-sm rounded-sm hover:bg-white/05 transition-colors"
           >
-            Ver serviços
+            {dict.cta2}
           </a>
         </div>
 
         {/* Scroll cue */}
         <div className="flex flex-col items-center gap-1.5 mt-2 opacity-40">
-          <span className="text-[10px] text-white uppercase tracking-[0.15em]">Scroll</span>
+          <span className="text-[10px] text-white uppercase tracking-[0.15em]">{dict.scroll}</span>
           <svg className="w-4 h-4 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
           </svg>

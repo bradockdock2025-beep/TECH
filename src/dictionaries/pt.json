@@ -1,0 +1,166 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "process": "Processo",
+    "projects": "Projetos",
+    "contact": "Contacto",
+    "startProject": "Iniciar projeto"
+  },
+  "hero": {
+    "badge": "Software House — Portugal",
+    "h1a": "Software que",
+    "h1b": "sustenta",
+    "h1c": "negócios reais.",
+    "description": "Construímos websites, e-commerce e aplicativos — para negócios, marcas e projetos pessoais. Do briefing ao deploy.",
+    "cta1": "Iniciar projeto",
+    "cta2": "Ver serviços",
+    "scroll": "Scroll"
+  },
+  "trust": {
+    "stats": [
+      { "value": "40+", "label": "Projetos entregues" },
+      { "value": "3–6", "label": "Semanas do briefing ao lançamento" },
+      { "value": "100%", "label": "Projetos entregues no prazo acordado" },
+      { "value": "3", "label": "Serviços: web, loja, aplicativo" }
+    ]
+  },
+  "services": {
+    "label": "Serviços",
+    "cta1": "Pedir orçamento",
+    "cta2": "Como trabalhamos",
+    "metrics": {
+      "performance": "Performance",
+      "seo": "SEO",
+      "accessibility": "Acessibilidade"
+    },
+    "items": {
+      "ecommerce": {
+        "name": "E-commerce",
+        "tagline": "Lojas online que vendem enquanto dorme.",
+        "detail": "Stripe, MB Way, gestão de stock. Checkout testado em produção."
+      },
+      "aplicativos": {
+        "name": "Aplicativos",
+        "tagline": "Software à medida para os processos únicos do seu negócio.",
+        "detail": "React, Node.js, PostgreSQL. Deploy em Vercel ou infra própria. Código entregue no repositório."
+      },
+      "pastelaria-gastronomia": {
+        "name": "Pastelaria & Gastronomia",
+        "tagline": "Lojas online para negócios de food que vendem produto e experiência.",
+        "detail": "Catálogo visual, encomendas online, entregas programadas. Do artesanal ao escalável."
+      },
+      "websites": {
+        "name": "Websites",
+        "tagline": "A presença online que representa o nível do seu negócio.",
+        "detail": "Next.js + TypeScript. Core Web Vitals acima de 90. CMS integrado se precisar."
+      },
+      "moda-lifestyle": {
+        "name": "Moda & Lifestyle",
+        "tagline": "Boutiques online que elevam a marca e convertem visitantes em clientes.",
+        "detail": "Design editorial, catálogo de produto, checkout otimizado para moda. Lançamento em 4 semanas."
+      }
+    }
+  },
+  "process": {
+    "label": "Como trabalhamos",
+    "title": "Processo previsível.",
+    "title2": "Entrega garantida.",
+    "steps": [
+      {
+        "number": "01",
+        "name": "Diagnóstico",
+        "duration": "1–2 dias",
+        "description": "Percebemos o negócio, os objetivos reais e os constrangimentos. Nenhuma linha de código antes de haver clareza sobre o que precisa de existir."
+      },
+      {
+        "number": "02",
+        "name": "Arquitectura",
+        "duration": "2–4 dias",
+        "description": "Estrutura técnica, stack e plano de entrega. Documento claro com o que vai ser construído, prazo e custo — sem surpresas a meio."
+      },
+      {
+        "number": "03",
+        "name": "Desenvolvimento",
+        "duration": "2–5 semanas",
+        "description": "Ciclos curtos com visibilidade contínua. Versões intermédias para validação antes de avançar. Sem desaparecimentos."
+      },
+      {
+        "number": "04",
+        "name": "Lançamento e suporte",
+        "duration": "1–3 dias + 30 dias grátis",
+        "description": "Deploy, testes, documentação. Disponíveis nos 30 dias seguintes para corrigir qualquer problema sem custo adicional."
+      }
+    ]
+  },
+  "differentials": {
+    "label": "Por que nós",
+    "title": "Menos discurso.",
+    "title2": "Mais razões concretas.",
+    "items": [
+      {
+        "title": "Prazo ou não cobramos.",
+        "proof": "100% dos projetos entregues na janela acordada.",
+        "description": "Cada projeto tem uma data de entrega contratual. Se não cumprirmos, trabalhamos sem custo adicional até entregar. Está no contrato."
+      },
+      {
+        "title": "Equipa, não freelancer.",
+        "proof": "Designer + programador + gestor desde o dia 1.",
+        "description": "Cada projeto tem três pessoas dedicadas. Sem dependência de uma única pessoa que pode ficar indisponível a meio do projeto."
+      },
+      {
+        "title": "Código que permanece seu.",
+        "proof": "Repositório completo. Sem lock-in de plataforma.",
+        "description": "No fim do projeto, o código é integralmente seu. Repositório documentado, infraestrutura transferível. Muda de equipa sem perder nada."
+      }
+    ]
+  },
+  "projects": {
+    "label": "Projetos",
+    "title": "Trabalho entregue.",
+    "title2": "Não prometido.",
+    "items": [
+      {
+        "category": "E-commerce",
+        "name": "Doja Paris",
+        "result": "E-commerce de moda streetwear com checkout Stripe, gestão de inventário e galeria social @Doja integrada."
+      },
+      {
+        "category": "Website Institucional",
+        "name": "Studio Arquitetura",
+        "result": "Site institucional com portfólio visual, 95+ no Lighthouse e integração com Google Analytics."
+      },
+      {
+        "category": "Aplicativo",
+        "name": "Gestão de Equipas",
+        "result": "Dashboard interno com autenticação por roles, gestão de tarefas e relatórios exportáveis."
+      },
+      {
+        "category": "E-commerce",
+        "name": "MarchéPlus",
+        "result": "Marketplace multi-categoria com sistema de promoções, timer de ofertas em tempo real e 6 métodos de pagamento integrados."
+      }
+    ]
+  },
+  "cta": {
+    "label": "Próximo passo",
+    "title": "O seu projeto começa com uma conversa.",
+    "description": "Descreva o que precisa. Respondemos em menos de 24 horas.",
+    "emailLabel": "Email",
+    "whatsappLabel": "WhatsApp",
+    "responseLabel": "Resposta",
+    "responseValue": "< 24 horas",
+    "sendEmail": "Enviar email",
+    "noCommitment": "Sem compromisso inicial · Reunião por vídeo ou presencial"
+  },
+  "footer": {
+    "servicesTitle": "Serviços",
+    "companyTitle": "Empresa",
+    "contactTitle": "Contacto",
+    "description": "Software house especializada em websites, e-commerce e aplicativos.",
+    "allRights": "Todos os direitos reservados.",
+    "builtWith": "Construído em Next.js · Optimizado para velocidade e conversão",
+    "howWeWork": "Como trabalhamos",
+    "projects": "Projetos",
+    "contact": "Contacto"
+  }
+}

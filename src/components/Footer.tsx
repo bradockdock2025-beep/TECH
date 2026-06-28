@@ -1,31 +1,37 @@
-const footerLinks = [
-  {
-    title: "Serviços",
-    links: [
-      { label: "Websites", href: "#servicos" },
-      { label: "E-commerce", href: "#servicos" },
-      { label: "Aplicativos", href: "#servicos" },
-    ],
-  },
-  {
-    title: "Empresa",
-    links: [
-      { label: "Como trabalhamos", href: "#processo" },
-      { label: "Projetos", href: "#projetos" },
-      { label: "Contacto", href: "#contacto" },
-    ],
-  },
-  {
-    title: "Contacto",
-    links: [
-      { label: "hello@doja.tech", href: "mailto:hello@doja.tech" },
-      { label: "WhatsApp", href: "https://wa.me/351910000000" },
-      { label: "LinkedIn", href: "#" },
-    ],
-  },
-];
+import type { Dict } from "@/app/[lang]/dictionaries";
 
-export default function Footer() {
+interface FooterProps {
+  dict: Dict["footer"];
+}
+
+export default function Footer({ dict }: FooterProps) {
+  const footerLinks = [
+    {
+      title: dict.servicesTitle,
+      links: [
+        { label: "Websites", href: "#servicos" },
+        { label: "E-commerce", href: "#servicos" },
+        { label: "Applications", href: "#servicos" },
+      ],
+    },
+    {
+      title: dict.companyTitle,
+      links: [
+        { label: dict.howWeWork, href: "#processo" },
+        { label: dict.projects, href: "#projetos" },
+        { label: dict.contact, href: "#contacto" },
+      ],
+    },
+    {
+      title: dict.contactTitle,
+      links: [
+        { label: "hello@doja.tech", href: "mailto:hello@doja.tech" },
+        { label: "WhatsApp", href: "https://wa.me/351910000000" },
+        { label: "LinkedIn", href: "#" },
+      ],
+    },
+  ];
+
   return (
     <footer className="border-t border-white/[0.06] bg-[#0b0b0e]">
       <div className="max-w-7xl mx-auto px-8 py-16">
@@ -36,7 +42,7 @@ export default function Footer() {
               DOJA<span className="text-[#1d6ff3]">.</span>TECH
             </a>
             <p className="text-sm text-white/30 leading-relaxed max-w-48">
-              Software house especializada em websites, e-commerce e aplicativos.
+              {dict.description}
             </p>
           </div>
 
@@ -64,11 +70,9 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/25">
-            © {new Date().getFullYear()} Doja Tech. Todos os direitos reservados.
+            © {new Date().getFullYear()} Doja Tech. {dict.allRights}
           </p>
-          <p className="text-xs text-white/25">
-            Construído em Next.js · Optimizado para velocidade e conversão
-          </p>
+          <p className="text-xs text-white/25">{dict.builtWith}</p>
         </div>
       </div>
     </footer>

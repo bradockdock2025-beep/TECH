@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
+import { headers } from "next/headers";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,23 +14,25 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Doja Tech — Websites, E-commerce e Aplicativos",
+  title: "Doja Tech — Websites, E-commerce & Applications",
   description:
-    "Software house que constrói websites, lojas online e aplicativos para empresas. Entregamos em semanas, com código que funciona.",
+    "Software house building websites, online stores and apps for businesses. Delivered in weeks, with code that works.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const lang = headersList.get("x-locale") ?? "fr";
+
   return (
     <html
-      lang="pt"
+      lang={lang}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0b0b0e] text-[#e8e8ed]">
-        <Navbar />
         {children}
       </body>
     </html>

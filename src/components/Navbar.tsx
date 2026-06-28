@@ -1,22 +1,38 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import type { Dict } from "@/app/[lang]/dictionaries";
 
-const navLinks = [
-  { label: "Serviços", href: "#servicos" },
-  { label: "Processo", href: "#processo" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Contacto", href: "#contacto" },
-];
+const locales = ["fr", "en", "pt"] as const;
 
-export default function Navbar() {
+interface NavbarProps {
+  dict: Dict["nav"];
+  lang: string;
+}
+
+export default function Navbar({ dict, lang }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const switchLocale = (locale: string) => {
+    const segments = pathname.split("/");
+    segments[1] = locale;
+    return segments.join("/") || `/${locale}`;
+  };
+
+  const navLinks = [
+    { label: dict.services, href: "#servicos" },
+    { label: dict.process, href: "#processo" },
+    { label: dict.projects, href: "#projetos" },
+    { label: dict.contact, href: "#contacto" },
+  ];
 
   return (
     <header
@@ -49,13 +65,35 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* CTA */}
-        <a
-          href="#contacto"
-          className="hidden md:inline-flex items-center px-5 py-2 text-sm font-semibold text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-200 rounded-sm"
-        >
-          Iniciar projeto
-        </a>
+        {/* Right side: lang switcher + CTA */}
+        <div className="hidden md:flex items-center gap-4">
+          {/* Language switcher */}
+          <div className="flex items-center gap-1">
+            {locales.map((locale, i) => (
+              <span key={locale} className="flex items-center gap-1">
+                {i > 0 && <span className="text-white/20 text-xs">·</span>}
+                <a
+                  href={switchLocale(locale)}
+                  className={`text-xs font-bold tracking-widest transition-colors ${
+                    locale === lang
+                      ? "text-white"
+                      : "text-white/30 hover:text-white/60"
+                  }`}
+                >
+                  {locale.toUpperCase()}
+                </a>
+              </span>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <a
+            href="#contacto"
+            className="inline-flex items-center px-5 py-2 text-sm font-semibold text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-200 rounded-sm"
+          >
+            {dict.startProject}
+          </a>
+        </div>
       </nav>
     </header>
   );

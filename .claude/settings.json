@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3033)",
+      "Bash(npx playwright *)",
+      "Bash(node -e ' *)",
+      "Read(//usr/local/lib/**)",
+      "Read(//Users/macbookpro/.npm-global/lib/**)",
+      "Read(//usr/local/lib/node_modules/**)",
+      "Bash(cp /Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/ecomerce.png \\\\ *)",
+      "Bash(mkdir -p /Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/src/dictionaries *)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code} %{redirect_url}\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/fr)",
+      "Bash(curl -s http://localhost:3000/en)",
+      "Bash(curl -s http://localhost:3000/pt)",
+      "Bash(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' -H 'Accept-Language: en-US,en;q=0.9' http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' -H 'Accept-Language: pt-PT,pt;q=0.9' http://localhost:3000/)"
+    ],
+    "additionalDirectories": [
+      "/Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates",
+      "/Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/src/app"
+    ]
+  }
+}
