@@ -18,7 +18,8 @@
       "Bash(curl -s -o /dev/null -w '%{http_code} %{redirect_url}' -H 'Accept-Language: pt-PT,pt;q=0.9' http://localhost:3000/)",
       "Read(//Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/**)",
       "Bash(cp /Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/logo.png /Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/public/images/logo.png)",
-      "Bash(cp /Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/TDLOGO.png /Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/public/images/logo.png)"
+      "Bash(cp /Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/TDLOGO.png /Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/public/images/logo.png)",
+      "Bash(cp /Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates/logo.png /Users/macbookpro/Documents/KONGO/Tesla-template/doja-site/public/images/logo-text.png)"
     ],
     "additionalDirectories": [
       "/Users/macbookpro/Documents/KONGO/Tesla-template/imagens-templates",
