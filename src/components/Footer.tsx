@@ -70,7 +70,7 @@ export default function Footer({ dict }: FooterProps) {
         {/* Bottom */}
         <div className="mt-16 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/25">
-            © {new Date().getFullYear()} Doja Tech. {dict.allRights}
+            © {new Date().getFullYear()} Tech Doja. {dict.allRights}
           </p>
           <p className="text-xs text-white/25">{dict.builtWith}</p>
         </div>

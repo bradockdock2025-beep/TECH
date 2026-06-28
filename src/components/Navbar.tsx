@@ -36,28 +36,25 @@ export default function Navbar({ dict, lang }: NavbarProps) {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-white ${
         scrolled
-          ? "bg-[#0b0b0e]/80 backdrop-blur-xl border-b border-white/[0.06]"
-          : "bg-transparent"
+          ? "shadow-sm border-b border-black/[0.08]"
+          : "border-b border-black/[0.06]"
       }`}
     >
-      <nav className="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
+      <nav className="max-w-7xl mx-auto px-8 h-11 flex items-center justify-between">
         {/* Logo */}
-        <a
-          href="#"
-          className="text-white font-bold text-base tracking-wide hover:opacity-80 transition-opacity"
-        >
-          DOJA<span className="text-[#1d6ff3]">.</span>TECH
+        <a href="#" className="hover:opacity-75 transition-opacity">
+          <img src="/images/logo.png" alt="Techdoja" className="h-8 w-auto" />
         </a>
 
         {/* Links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-white/60 hover:text-white transition-colors tracking-wide"
+                className="text-sm text-black hover:text-black/60 transition-colors tracking-wide"
               >
                 {link.label}
               </a>
@@ -71,13 +68,13 @@ export default function Navbar({ dict, lang }: NavbarProps) {
           <div className="flex items-center gap-1">
             {locales.map((locale, i) => (
               <span key={locale} className="flex items-center gap-1">
-                {i > 0 && <span className="text-white/20 text-xs">·</span>}
+                {i > 0 && <span className="text-black/20 text-[10px]">·</span>}
                 <a
                   href={switchLocale(locale)}
-                  className={`text-xs font-bold tracking-widest transition-colors ${
+                  className={`text-[10px] font-bold tracking-widest transition-colors ${
                     locale === lang
-                      ? "text-white"
-                      : "text-white/30 hover:text-white/60"
+                      ? "text-black"
+                      : "text-black/30 hover:text-black/60"
                   }`}
                 >
                   {locale.toUpperCase()}
@@ -89,7 +86,7 @@ export default function Navbar({ dict, lang }: NavbarProps) {
           {/* CTA */}
           <a
             href="#contacto"
-            className="inline-flex items-center px-5 py-2 text-sm font-semibold text-white border border-white/20 hover:bg-white hover:text-black transition-all duration-200 rounded-sm"
+            className="inline-flex items-center px-4 py-1.5 text-xs font-semibold text-white bg-black hover:bg-black/80 transition-all duration-200 rounded-sm"
           >
             {dict.startProject}
           </a>
